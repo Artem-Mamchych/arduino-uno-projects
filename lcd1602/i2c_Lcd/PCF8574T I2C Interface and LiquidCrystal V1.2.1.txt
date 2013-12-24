@@ -1,0 +1,11 @@
+This examples uses:
+
+1. PCF8574T I2C Interface 8-bit I/O expander
+
+The PCF8574/74A provides general-purpose remote I/O expansion via the two-wire bidirectional I2C bus (serial clock (SCL), serial data (SDA)).
+
+See http://www.nxp.com/products/interface_and_connectivity/i2c/i2c_general_purpose_i_o/PCF8574T.html
+
+2. Library LiquidCrystal V1.2.1+
+
+See https://bitbucket.org/fmalpartida/new-liquidcrystal/wiki/Home
