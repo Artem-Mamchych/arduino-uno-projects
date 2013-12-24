@@ -1,0 +1,19 @@
+See http://www.dfrobot.com/wiki/index.php/Arduino_LCD_KeyPad_Shield_%28SKU:_DFR0009%29
+
+Pin 10 bug:
+don’t use pin 10 when using this shield. The library has functions to enable and disable the backlight. But in the design, a flaw exists, that when pin 10 is set to output, and set high, it could cause the IO pin of the MCU (the main Atmel chip) to deliver too much current (over the datasheet’s maximum rating) to the backlight LED. This may cause the over stressing of the MCU and may reduce its life, or maybe even blow it up.
+
+    To set the backlight on, set pin 10 as input.
+    To set the backlight off, set pin 10 as output, and immediately set output low (never high!)
+
+For more information, there is discussion on the Arduino forums about this. http://arduino.cc/forum/index.php?topic=96747.0
+
+Pin Allocation:
+Analog 0 	Button (select, up, right, down and left)
+Digital 4 	DB4
+Digital 5 	DB5
+Digital 6 	DB6
+Digital 7 	DB7
+Digital 8 	RS (Data or Signal Display Selection)
+Digital 9 	Enable
+Digital 10 	Backlit Control 
